@@ -3,14 +3,99 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Checkout</ion-title>
+    <ion-title>Order form</ion-title>
     <ion-buttons slot="end">
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <p class="ion-padding-start ion-padding-end">
-      CHECKOUT TEST
-    </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-img class="coupon-image" src="../../../assets/img/task-images/coupon-icon.png"></ion-img>
+            <ion-text color="dark">
+              <h2>Limited Time</h2>
+              <p>Also <span> FREE </span> Shipping Today </p>
+            </ion-text>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-img class="" src="../../../assets/img/task-images/BSLipTreatmentWand.png"></ion-img>
+        <div class="bg-white">
+          <ion-text>
+            <h2>Limited Time</h2>
+            <p>Also <span> FREE </span> Shipping Today </p>
+          </ion-text>
+        </div>
+        <div class="bg-dark">
+          <ion-text>
+            <p>Replenishes And Hydrates For Fuller Softer Lips</p>
+          </ion-text>
+        </div>
+        <div class="bg-orange">
+          <ion-text>
+            <p>Feels Like A Silky Gloss</p>
+          </ion-text>
+        </div>
+        <div class="bg-dark">
+          <ion-text>
+            <p>Plump Your Lips Naturally And Safely</p>
+          </ion-text>
+        </div>
+        <div class="bg-orange">
+          <ion-text>
+            <p>Feels Cool On Contact, Thanks To Peppermint Oil</p>
+          </ion-text>
+        </div>
+        <div class="bg-white">
+          <ion-text>
+            <h2>Common Q&A</h2>
+          </ion-text>
+        </div>
+        <ion-list>
+          <ion-item *ngFor="let answer of loadedAnswers.slice(1)">
+            <ion-thumbnail slot="start">
+              <!-- <ion-img [src]="place.imageUrl"></ion-img> -->
+            </ion-thumbnail>
+            <ion-label>
+                <ion-icon ios="ios-help" md="md-help"></ion-icon>
+              <h2>{{ answer.qestuion }}</h2>
+              <p>{{ answer.answer }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size-lg="5" size-sm="12" offset-sm="0">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-img class="coupon-image" src="../../../assets/img/task-images/usps.jpg"></ion-img>
+          </ion-card-title>
+        </ion-card-header>
+        <div class="bg-orange">
+          <ion-text>Tell Us Where To Send YOUR 2 X 24/7 LIP TREATMENT NORMALLY $39.90ea</ion-text>
+        </div>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Test</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Test</p>
+          </ion-card-content>
+        </ion-card>
+        <ion-list>
+          <ion-item *ngFor="let review of loadedReviews.slice(1)">
+            <ion-thumbnail slot="start">
+                <ion-icon ios="ios-help" md="md-help"></ion-icon>
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ review.customer }}</h2>
+              <p>{{ review.review }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
