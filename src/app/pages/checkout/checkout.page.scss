@@ -149,12 +149,63 @@ ion-card {
     display: none;
   }
 
-  .text-wrapper h2 {
+  .f-z {
+    font-size: 44px;
+  }
+
+  .d-n {
+    display: none;
+  }
+
+  .btn {
+    height: 130px;
     font-size: 24px;
   }
 
+  .c-grey {
+    font-size: 20px;
+  }
+
+  .bg-green {
+    height: 160px;
+    p {
+      font-size: 32px;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    height: 215px;
+
+    .coupon-image {
+      height: 115px;
+      width: 80px;
+      border: 2px solid red;
+    }
+  }
+
+  .wrapper {
+    height: 170px;
+    .text-wrapper {
+      h2 {
+        font-size: 44px;
+        p {
+          font-size: 44px;
+        }
+      }
+    }
+  }
+
   .bg-orange {
-    height: 270px;
+    height: 265px;
+
+    h2 {
+      font-size: 32px;
+    }
   }
 
 }
