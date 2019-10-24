@@ -1,12 +1,33 @@
-ion-col {
-  border: 1px solid red;
+// Reusable
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.coupon-image {
-  width: 180px;
-  height: 160px;
+.bold {
+  font-weight: bold;
+  font-size: 18px;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.mt-mb {
+  margin: 15px 0;
+}
+
+.m-l {
+  margin-left: 10px;
+}
+
+.p {
+  font-weight: normal;
+}
+
+// Background colors
 .bg-orange {
   background: #dcb3ad;
   color: white;
@@ -19,8 +40,101 @@ ion-col {
   text-align: center;
 }
 
+.bg-yellow {
+  color: #ffd203;
+}
+
 .bg-dark {
   background: #000000;
   color: white;
   text-align: center;
+}
+
+.bg-grey {
+  background: #303030;
+  color: white;
+}
+
+.bg-green {
+  background: #6ac8b3;
+  color: black;
+}
+
+.c-grey {
+  color: #9d9d9d;
+}
+
+// height classes
+.h-70 {
+  height: 70px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+ion-card {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+}
+
+.wrapper {
+  height: 110px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+
+  .image {
+    width: 100px;
+    height: 120px;
+  }
+
+  .text-wrapper {
+    text-align: center;
+    margin: auto;
+
+    h3, p {
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.answer-wrapper {
+  display: flex;
+  align-items: flex-end;
+  white-space: initial;
+}
+
+.review-wrapper {
+  text-align: left;
+  white-space: initial;
+}
+
+.form-wrapper {
+  border: 2px solid grey;
+}
+
+.content-wrapper {
+  border-bottom: 2px solid orangered;
+}
+
+.items {
+  display: flex;
+  padding: 1rem;
+
+  .item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+  }
 }

@@ -4,8 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Order form</ion-title>
-    <ion-buttons slot="end">
-    </ion-buttons>
+    <ion-buttons slot="end"> </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,88 +12,290 @@
   <ion-grid>
     <ion-row>
       <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
-        <ion-card-header>
-          <ion-card-title>
-            <ion-img class="coupon-image" src="../../../assets/img/task-images/coupon-icon.png"></ion-img>
-            <ion-text color="dark">
-              <h2>Limited Time</h2>
-              <p>Also <span> FREE </span> Shipping Today </p>
-            </ion-text>
-          </ion-card-title>
-        </ion-card-header>
-        <ion-img class="" src="../../../assets/img/task-images/BSLipTreatmentWand.png"></ion-img>
-        <div class="bg-white">
-          <ion-text>
-            <h2>Limited Time</h2>
-            <p>Also <span> FREE </span> Shipping Today </p>
-          </ion-text>
+        <div class="wrapper">
+          <ion-img
+            class="image m-l"
+            src="../../../assets/img/task-images/coupon-icon.png"
+          ></ion-img>
+          <div class="text-wrapper">
+            <h2 class="bold">
+              BUY 1 GET 1 50% OFF
+              <p class="p">Was $39.90</p>
+              <span class="underline">Now Only $29.92</span>
+            </h2>
+          </div>
         </div>
-        <div class="bg-dark">
+          <ion-img src="../../../assets/img/task-images/BSLipTreatmentWand.png"></ion-img>
+        <ion-text class="ion-text-center">
+          <h2 class="bold">Limited Time</h2>
+          <p>Also <span class="bold">FREE</span> Shipping Today</p>
+        </ion-text>
+        <div class="ion-text-center bg-dark h-50 content-center mt-mb">
           <ion-text>
             <p>Replenishes And Hydrates For Fuller Softer Lips</p>
           </ion-text>
         </div>
-        <div class="bg-orange">
+        <div class="bg-orange h-50 content-center mt-mb">
           <ion-text>
             <p>Feels Like A Silky Gloss</p>
           </ion-text>
         </div>
-        <div class="bg-dark">
+        <div class="bg-dark h-50 content-center mt-mb">
           <ion-text>
             <p>Plump Your Lips Naturally And Safely</p>
           </ion-text>
         </div>
-        <div class="bg-orange">
+        <div class="bg-orange h-50 content-center mt-mb">
           <ion-text>
             <p>Feels Cool On Contact, Thanks To Peppermint Oil</p>
           </ion-text>
         </div>
-        <div class="bg-white">
+        <div class="bg-white h-50 content-center mt-mb">
           <ion-text>
-            <h2>Common Q&A</h2>
+            <h2 class="bold underline">Common Q&A</h2>
           </ion-text>
         </div>
         <ion-list>
-          <ion-item *ngFor="let answer of loadedAnswers.slice(1)">
-            <ion-thumbnail slot="start">
-              <!-- <ion-img [src]="place.imageUrl"></ion-img> -->
-            </ion-thumbnail>
+          <ion-item
+            lines="none"
+            class="ion-no-padding"
+            *ngFor="let answer of loadedAnswers"
+          >
             <ion-label>
-                <ion-icon ios="ios-help" md="md-help"></ion-icon>
-              <h2>{{ answer.qestuion }}</h2>
+              <div class="answer-wrapper">
+                <ion-icon
+                  ios="ios-help-circle"
+                  md="md-help-circle"
+                  size="large"
+                ></ion-icon>
+                <h2 class="bold">{{ answer.qestuion }}</h2>
+              </div>
               <p>{{ answer.answer }}</p>
             </ion-label>
           </ion-item>
         </ion-list>
       </ion-col>
       <ion-col size-lg="5" size-sm="12" offset-sm="0">
-        <ion-card-header>
-          <ion-card-title>
-            <ion-img class="coupon-image" src="../../../assets/img/task-images/usps.jpg"></ion-img>
-          </ion-card-title>
-        </ion-card-header>
-        <div class="bg-orange">
-          <ion-text>Tell Us Where To Send YOUR 2 X 24/7 LIP TREATMENT NORMALLY $39.90ea</ion-text>
+        <div class="wrapper">
+          <ion-img
+            class="image"
+            src="../../../assets/img/task-images/usps.jpg"
+          ></ion-img>
+          <div class="text-wrapper">
+            <h2 class="bold">
+              YOUR 2x24/7 LIP TREATMENT Will Be
+              <span class="underline">Delivered</span>
+              Within 7 Business Days
+            </h2>
+          </div>
         </div>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Test</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>Test</p>
-          </ion-card-content>
-        </ion-card>
+        <div class="bg-orange content-center h-70">
+          <ion-text>
+            <h2 class="bold">
+              <span class="p">Tell Us Where To Send </span>YOUR 2 X 24/7 LIP
+              TREATMENT NORMALLY $39.90ea
+            </h2>
+          </ion-text>
+        </div>
+        <div class="form-wrapper">
+          <div class="content-wrapper">
+            <!-- <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div class="items">
+                    <div class="item">
+                      <h2>1</h2>
+                    </div>
+                    <div class="item">
+                      <h2>SHIPPING</h2>
+                      <p>Where Should We Ship Your Product?</p>
+                    </div>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <div class="content">
+                      <h2>2</h2>
+                    </div>
+                    <div class="content2">
+                      <h2>QUANTITY</h2>
+                      <p>How Many Would You Like?</p>
+                    </div>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid> -->
+          </div>
+          <form>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">First Name</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Last Name</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Email Address</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating"
+                      >Mobile Phone Number</ion-label
+                    >
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Address Line 1</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">City</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">United States</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">State/Province</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label position="floating">Zip/Postal Code</ion-label>
+                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-button type="submit" color="dark" expand="block">
+                    > Add Payment Information
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <div class="content-center">
+                <div>
+                  <p class="c-grey">We Respect Your Privacy & Information</p>
+                </div>
+              </div>
+            </ion-grid>
+          </form>
+        </div>
+        <div class="bg-green content-center h-50">
+          <ion-text>
+            <p class="bold ion-no-margin">Shopping Is Safe & Secure - Guaranteed</p>
+          </ion-text>
+        </div>
+        <div class="wrapper">
+          <ion-img
+            class="coupon-image"
+            src="../../../assets/img/task-images/secure-order-lock-02.png"
+          ></ion-img>
+          <div class="text-wrapper ion-text-start">
+            <p>
+              Secure credit card payment
+            </p>
+            <p>This as a secure 256-bit SSL encrypted payment.</p>
+          </div>
+        </div>
+        <div class="image-wrapper content-center">
+          <ion-img
+            class="coupon-image"
+            src="../../../assets/img/task-images/cc.png"
+          ></ion-img>
+        </div>
+        <div class="bg-white h-50">
+          <ion-text>
+            <h2 class="bold underline">What Our Customers Say</h2>
+          </ion-text>
+        </div>
         <ion-list>
-          <ion-item *ngFor="let review of loadedReviews.slice(1)">
-            <ion-thumbnail slot="start">
-                <ion-icon ios="ios-help" md="md-help"></ion-icon>
-            </ion-thumbnail>
+          <ion-item lines="none" *ngFor="let review of loadedReviews">
             <ion-label>
-              <h2>{{ review.customer }}</h2>
-              <p>{{ review.review }}</p>
+              <div class="review-wrapper">
+                <h2 class="bold">{{ review.customer }}</h2>
+                <ion-icon
+                  class="bg-yellow"
+                  ios="ios-star"
+                  md="md-star"
+                  size="large"
+                ></ion-icon>
+                <ion-icon
+                  class="bg-yellow"
+                  ios="ios-star"
+                  md="md-star"
+                  size="large"
+                ></ion-icon>
+                <ion-icon
+                  class="bg-yellow"
+                  ios="ios-star"
+                  md="md-star"
+                  size="large"
+                ></ion-icon>
+                <ion-icon
+                  class="bg-yellow"
+                  ios="ios-star"
+                  md="md-star"
+                  size="large"
+                ></ion-icon>
+                <ion-icon
+                  class="bg-yellow"
+                  ios="ios-star"
+                  md="md-star"
+                  size="large"
+                ></ion-icon>
+                <ion-text>
+                  <p>{{ review.review }}</p>
+                </ion-text>
+              </div>
             </ion-label>
           </ion-item>
         </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row class="bg-grey">
+      <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="2">
+        <p>CATE MCNABB &copy 2019. All Rights Reserved</p>
+      </ion-col>
+      <ion-col size-lg="5" size-sm="12" offset-sm="0">
+        <p>
+          Contact | Privacy Policy | Terms & Conditions | Customer Service
+          Phone:+1 (815) 900 7305 - Text: +1 (312) 626 9507
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
