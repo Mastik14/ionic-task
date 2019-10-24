@@ -11,6 +11,11 @@
   font-size: 18px;
 }
 
+.normal {
+  font-weight: normal;
+  font-size: 15px;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -137,4 +142,19 @@ ion-card {
     text-align: center;
     padding: 1rem;
   }
+}
+
+@media(max-width: 992px) {
+  .image {
+    display: none;
+  }
+
+  .text-wrapper h2 {
+    font-size: 24px;
+  }
+
+  .bg-orange {
+    height: 270px;
+  }
+
 }

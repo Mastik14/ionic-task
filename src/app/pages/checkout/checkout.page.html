@@ -25,7 +25,9 @@
             </h2>
           </div>
         </div>
-          <ion-img src="../../../assets/img/task-images/BSLipTreatmentWand.png"></ion-img>
+        <ion-img
+          src="../../../assets/img/task-images/BSLipTreatmentWand.png"
+        ></ion-img>
         <ion-text class="ion-text-center">
           <h2 class="bold">Limited Time</h2>
           <p>Also <span class="bold">FREE</span> Shipping Today</p>
@@ -50,30 +52,6 @@
             <p>Feels Cool On Contact, Thanks To Peppermint Oil</p>
           </ion-text>
         </div>
-        <div class="bg-white h-50 content-center mt-mb">
-          <ion-text>
-            <h2 class="bold underline">Common Q&A</h2>
-          </ion-text>
-        </div>
-        <ion-list>
-          <ion-item
-            lines="none"
-            class="ion-no-padding"
-            *ngFor="let answer of loadedAnswers"
-          >
-            <ion-label>
-              <div class="answer-wrapper">
-                <ion-icon
-                  ios="ios-help-circle"
-                  md="md-help-circle"
-                  size="large"
-                ></ion-icon>
-                <h2 class="bold">{{ answer.qestuion }}</h2>
-              </div>
-              <p>{{ answer.answer }}</p>
-            </ion-label>
-          </ion-item>
-        </ion-list>
       </ion-col>
       <ion-col size-lg="5" size-sm="12" offset-sm="0">
         <div class="wrapper">
@@ -98,8 +76,8 @@
           </ion-text>
         </div>
         <div class="form-wrapper">
-          <div class="content-wrapper">
-            <!-- <ion-grid>
+          <!-- <div class="content-wrapper">
+            <ion-grid>
               <ion-row>
                 <ion-col>
                   <div class="items">
@@ -124,8 +102,8 @@
                   </ion-item>
                 </ion-col>
               </ion-row>
-            </ion-grid> -->
-          </div>
+            </ion-grid>
+          </div> -->
           <form>
             <ion-grid>
               <ion-row>
@@ -215,7 +193,9 @@
         </div>
         <div class="bg-green content-center h-50">
           <ion-text>
-            <p class="bold ion-no-margin">Shopping Is Safe & Secure - Guaranteed</p>
+            <p class="bold ion-no-margin">
+              Shopping Is Safe & Secure - Guaranteed
+            </p>
           </ion-text>
         </div>
         <div class="wrapper">
@@ -236,6 +216,39 @@
             src="../../../assets/img/task-images/cc.png"
           ></ion-img>
         </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
+        <div class="bg-white h-50 content-center">
+          <ion-text>
+            <h2 class="bold underline">Common Q&A</h2>
+          </ion-text>
+        </div>
+        <ion-list>
+          <ion-item
+            lines="none"
+            class="ion-no-padding"
+            *ngFor="let answer of loadedAnswers"
+          >
+            <ion-label>
+              <div class="answer-wrapper">
+                <ion-icon
+                  ios="ios-help-circle"
+                  md="md-help-circle"
+                  size="large"
+                ></ion-icon>
+                <h2 class="bold">{{ answer.qestuion }}</h2>
+              </div>
+              <p>{{ answer.answer }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size-lg="5" size-sm="12" offset-sm="0">
         <div class="bg-white h-50">
           <ion-text>
             <h2 class="bold underline">What Our Customers Say</h2>
@@ -286,13 +299,16 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <ion-grid>
-    <ion-row class="bg-grey">
-      <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="2">
-        <p>CATE MCNABB &copy 2019. All Rights Reserved</p>
+    <ion-row>
+      <ion-col no-border class="bg-grey ion-no-margin" size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
+        <ion-text class="content-center">
+          <p class="normal">CATE MCNABB &copy 2019. All Rights Reserved</p>
+        </ion-text>
       </ion-col>
-      <ion-col size-lg="5" size-sm="12" offset-sm="0">
-        <p>
+      <ion-col no-border class="bg-grey ion-no-margin" size-lg="5" size-sm="12" offset-sm="0">
+        <p class="normal ion-text-center">
           Contact | Privacy Policy | Terms & Conditions | Customer Service
           Phone:+1 (815) 900 7305 - Text: +1 (312) 626 9507
         </p>
