@@ -18,10 +18,10 @@
             src="../../../assets/img/task-images/coupon-icon.png"
           ></ion-img>
           <div class="text-wrapper ">
-            <h2 class="bold f-z">
+            <h2 class="bold f-z-25">
               BUY 1 GET 1 50% OFF
-              <p class="p f-z">Was $39.90</p>
-              <span class="underline f-z">Now Only $29.92</span>
+              <p class="p f-z-25">Was $39.90</p>
+              <span class="underline f-z-25">Now Only $29.92</span>
             </h2>
           </div>
         </div>
@@ -29,29 +29,29 @@
           src="../../../assets/img/task-images/BSLipTreatmentWand.png"
         ></ion-img>
         <ion-text class="ion-text-center">
-          <h2 class="bold f-z">Limited Time</h2>
-          <p class="f-z">
-            Also <span class="bold f-z">FREE</span> Shipping Today
+          <h2 class="bold f-z-40">Limited Time</h2>
+          <p class="f-z-40">
+            Also <span class="bold f-z-40">FREE</span> Shipping Today
           </p>
         </ion-text>
         <div class="ion-text-center bg-dark h-50 content-center mt-mb d-n">
           <ion-text>
-            <p>Replenishes And Hydrates For Fuller Softer Lips</p>
+            <p class="f-s-i">Replenishes And Hydrates For Fuller Softer Lips</p>
           </ion-text>
         </div>
         <div class="bg-orange h-50 content-center mt-mb d-n">
           <ion-text>
-            <p>Feels Like A Silky Gloss</p>
+            <p class="f-s-i">Feels Like A Silky Gloss</p>
           </ion-text>
         </div>
         <div class="bg-dark h-50 content-center mt-mb d-n">
           <ion-text>
-            <p>Plump Your Lips Naturally And Safely</p>
+            <p class="f-s-i">Plump Your Lips Naturally And Safely</p>
           </ion-text>
         </div>
         <div class="bg-orange h-50 content-center mt-mb d-n">
           <ion-text>
-            <p>Feels Cool On Contact, Thanks To Peppermint Oil</p>
+            <p class="f-s-i">Feels Cool On Contact, Thanks To Peppermint Oil</p>
           </ion-text>
         </div>
       </ion-col>
@@ -62,18 +62,18 @@
             src="../../../assets/img/task-images/usps.jpg"
           ></ion-img>
           <div class="text-wrapper">
-            <h2 class="bold">
+            <h2 class="bold f-z-25">
               YOUR 2x24/7 LIP TREATMENT Will Be
-              <span class="underline">Delivered</span>
+              <span class="underline f-z-25">Delivered</span>
               Within 7 Business Days
             </h2>
           </div>
         </div>
-        <div class="bg-orange content-center h-70">
+        <div class="bg-orange content-center h-120">
           <ion-text>
-            <h2 class="bold">
-              <span class="p">Tell Us Where To Send </span>YOUR 2 X 24/7 LIP
-              TREATMENT NORMALLY $39.90ea
+            <h2 class="bold f-z-25">
+              <span class="p f-z-25">Tell Us Where To Send </span>YOUR 2 X 24/7
+              LIP TREATMENT NORMALLY $39.90ea
             </h2>
           </ion-text>
         </div>
@@ -81,96 +81,422 @@
           <div class="content-wrapper">
             <div class="item">
               <div class="inline-block">
-                  <h1 class="inline-block">1</h1>
+                <h2 class="inline-block f-z-32">1</h2>
               </div>
-              <div class="inline-block">
-                  <span class="inline-block">SHIPPING</span>
-                  <span class="inline-block"
-                    >Where Should We Ship Your Product ?</span
-                  >
+              <div class="inline-block text-item">
+                <span class="d-block f-z-18 c-orange">SHIPPING</span>
+                <span class="inline-block f-z-15"
+                  >Where Should We Ship Your Product ?</span
+                >
               </div>
             </div>
             <div class="item">
-              <h2 class="inline-block">2</h2>
-              <p class="inline-block">QUANTITY</p>
-              <p class="inline-block">How Many Would You Like ?</p>
+              <div class="inline-block">
+                <h2 class="inline-block f-z-32">2</h2>
+              </div>
+              <div class="inline-block text-item">
+                <span class="d-block f-z-18 c-gray">QUANTITY</span>
+                <span class="inline-block f-z-15"
+                  >How Many Would You Like ?</span
+                >
+              </div>
             </div>
           </div>
-          <form>
+          <form [formGroup]="form" (ngSubmit)="submit()">
             <ion-grid>
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper">
-                    <ion-label lines="none" position="floating">First Name</ion-label>
-                    <ion-input lines="none" type="text" autocomplete autocorrect></ion-input>
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('firstName').valid &&
+                      form.get('firstName').touched
+                    "
+                    [class.valid]="
+                      form.get('firstName').valid &&
+                      form.get('firstName').touched
+                    "
+                  >
+                    <ion-label position="floating">First Name</ion-label>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="firstName"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('lastName').valid &&
+                      form.get('lastName').touched
+                    "
+                    [class.valid]="
+                      form.get('lastName').valid && form.get('lastName').touched
+                    "
+                  >
                     <ion-label position="floating">Last Name</ion-label>
-                    <ion-input lines="none" type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="lastName"
+                    ></ion-input>
                   </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  !form.get('firstName').valid && form.get('firstName').touched
+                "
+              >
+                <ion-col>
+                  <p>* First Name must be between 2 and 20 characters.</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  !form.get('lastName').valid && form.get('lastName').touched
+                "
+              >
+                <ion-col>
+                  <p>* Last Name must be between 2 and 20 characters.</p>
                 </ion-col>
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('email').valid && form.get('email').touched
+                    "
+                    [class.valid]="
+                      form.get('email').valid && form.get('email').touched
+                    "
+                  >
                     <ion-label position="floating">Email Address</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="email"
+                    ></ion-input>
                   </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="!form.get('email').valid && form.get('email').touched"
+              >
+                <ion-col *ngIf="form.get('email').errors.required">
+                  <p>* Email should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="!form.get('email').valid && form.get('email').touched"
+              >
+                <ion-col *ngIf="form.get('email').errors.email">
+                  <p>* Please enter a valid email</p>
                 </ion-col>
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('phone').valid && form.get('phone').touched
+                    "
+                    [class.valid]="
+                      form.get('phone').valid && form.get('phone').touched
+                    "
+                  >
                     <ion-label position="floating"
                       >Mobile Phone Number</ion-label
                     >
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="phone"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
+
+              <ion-row
+                *ngIf="form.get('phone').invalid && form.get('phone').touched"
+              >
+                <ion-col *ngIf="form.get('phone').errors.required">
+                  <p>* Mobile Phone Number should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="form.get('phone').invalid && form.get('phone').touched"
+              >
+                <ion-col *ngIf="form.get('phone').errors.minlength">
+                  <p>
+                    * Phone Must be at least
+                    {{ form.get("phone").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("phone").errors.minlength.actualLength }}.
+                  </p>
+                </ion-col>
+              </ion-row>
+
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('address').valid && form.get('address').touched
+                    "
+                    [class.valid]="
+                      form.get('address').valid && form.get('address').touched
+                    "
+                  >
                     <ion-label position="floating">Address Line 1</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="address"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
+
+              <ion-row
+                *ngIf="
+                  form.get('address').invalid && form.get('address').touched
+                "
+              >
+                <ion-col *ngIf="form.get('address').errors.required">
+                  <p>* Address should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  form.get('address').invalid && form.get('address').touched
+                "
+              >
+                <ion-col *ngIf="form.get('address').errors.minlength">
+                  <p>
+                    * Address Must be at least
+                    {{ form.get("address").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("address").errors.minlength.actualLength }}.
+                  </p>
+                </ion-col>
+              </ion-row>
+
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('city').valid && form.get('city').touched
+                    "
+                    [class.valid]="
+                      form.get('city').valid && form.get('city').touched
+                    "
+                  >
                     <ion-label position="floating">City</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="city"
+                    ></ion-input>
                   </ion-item>
+                </ion-col>
+              </ion-row>
+
+              <ion-row
+                *ngIf="
+                  form.get('city').invalid && form.get('city').touched
+                "
+              >
+                <ion-col *ngIf="form.get('city').errors.required">
+                  <p>* City should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  form.get('city').invalid && form.get('city').touched
+                "
+              >
+                <ion-col *ngIf="form.get('city').errors.minlength">
+                  <p>
+                    * City Must be at least
+                    {{ form.get("city").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("city").errors.minlength.actualLength }}.
+                  </p>
                 </ion-col>
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper border-radius">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper border-radius"
+                    [class.invalid]="
+                      !form.get('unitedStates').valid &&
+                      form.get('unitedStates').touched
+                    "
+                    [class.valid]="
+                      form.get('unitedStates').valid &&
+                      form.get('unitedStates').touched
+                    "
+                  >
                     <ion-label position="floating">United States</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="unitedStates"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
+
+              <ion-row
+                *ngIf="
+                  form.get('unitedStates').invalid && form.get('unitedStates').touched
+                "
+              >
+                <ion-col *ngIf="form.get('unitedStates').errors.required">
+                  <p>* United States should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  form.get('unitedStates').invalid && form.get('unitedStates').touched
+                "
+              >
+                <ion-col *ngIf="form.get('unitedStates').errors.minlength">
+                  <p>
+                    * United States Must be at least
+                    {{ form.get("unitedStates").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("unitedStates").errors.minlength.actualLength }}.
+                  </p>
+                </ion-col>
+              </ion-row>
+
               <ion-row>
                 <ion-col>
-                  <ion-item class="input-wrapper border-radius">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper border-radius"
+                    [class.invalid]="
+                      !form.get('state').valid && form.get('state').touched
+                    "
+                    [class.valid]="
+                      form.get('state').valid && form.get('state').touched
+                    "
+                  >
                     <ion-label position="floating">State/Province</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="state"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
                 <ion-col>
-                  <ion-item class="input-wrapper">
+                  <ion-item
+                    lines="none"
+                    class="input-wrapper"
+                    [class.invalid]="
+                      !form.get('zip').valid && form.get('zip').touched
+                    "
+                    [class.valid]="
+                      form.get('zip').valid && form.get('zip').touched
+                    "
+                  >
                     <ion-label position="floating">Zip/Postal Code</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input
+                      type="text"
+                      autocomplete
+                      autocorrect
+                      formControlName="zip"
+                    ></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
+
+              <ion-row
+                *ngIf="
+                  form.get('state').invalid && form.get('state').touched
+                "
+              >
+                <ion-col *ngIf="form.get('state').errors.required">
+                  <p>* State should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  form.get('state').invalid && form.get('state').touched
+                "
+              >
+                <ion-col *ngIf="form.get('state').errors.minlength">
+                  <p>
+                    * State Must be at least
+                    {{ form.get("state").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("state").errors.minlength.actualLength }}.
+                  </p>
+                </ion-col>
+              </ion-row>
+
+              <ion-row
+                *ngIf="
+                  form.get('zip').invalid && form.get('zip').touched
+                "
+              >
+                <ion-col *ngIf="form.get('zip').errors.required">
+                  <p>* Zip should not be empty</p>
+                </ion-col>
+              </ion-row>
+              <ion-row
+                *ngIf="
+                  form.get('zip').invalid && form.get('zip').touched
+                "
+              >
+                <ion-col *ngIf="form.get('zip').errors.minlength">
+                  <p>
+                    * Zip/Postal Code Must be at least
+                    {{ form.get("zip").errors.minlength.requiredLength }}.
+                  </p>
+                  <p>
+                    * Now the number of characters
+                    {{ form.get("zip").errors.minlength.actualLength }}.
+                  </p>
+                </ion-col>
+              </ion-row>
+
               <ion-row>
                 <ion-col>
                   <ion-button
+                    [disabled]="!form.valid"
                     class="btn"
                     type="submit"
                     color="dark"
@@ -222,7 +548,7 @@
       <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
         <div class="bg-white h-50 content-center">
           <ion-text>
-            <h2 class="bold underline f-z-32">Common Q&A</h2>
+            <h2 no-margin class="bold underline f-z-32">Common Q&A</h2>
           </ion-text>
         </div>
         <ion-list>
@@ -246,9 +572,11 @@
         </ion-list>
       </ion-col>
       <ion-col size-lg="5" size-sm="12" offset-sm="0">
-        <div class="bg-white h-50">
+        <div class="bg-white h-50 content-center">
           <ion-text>
-            <h2 class="bold underline f-z-32">What Our Customers Say</h2>
+            <h2 no-margin class="bold underline f-z-32">
+              What Our Customers Say
+            </h2>
           </ion-text>
         </div>
         <ion-list>
@@ -313,7 +641,9 @@
           offset-lg="1"
         >
           <ion-text class="content-center">
-            <p class="normal f-z-20">CATE MCNABB &copy 2019. All Rights Reserved</p>
+            <p class="normal f-z-20">
+              CATE MCNABB &copy 2019. All Rights Reserved
+            </p>
           </ion-text>
         </ion-col>
         <ion-col
