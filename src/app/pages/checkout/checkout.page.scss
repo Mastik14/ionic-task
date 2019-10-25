@@ -181,6 +181,7 @@ ion-card {
 
     .text-item {
       align-self: center;
+
       .c-orange {
         color: #ff7400;
       }
@@ -190,6 +191,7 @@ ion-card {
       }
 
     }
+
     h2 {
       font-size: 34px;
       margin: 0 15px;
@@ -213,13 +215,6 @@ ion-card {
   border: 2px solid #cccccc;
   background: #f1f1f1;
   color: black;
-  // &.ng-invalid.ng-touched {
-  //   border: 1px solid red;
-  // }
-
-  // &.ng-valid.ng-touched {
-  //   border: 1px solid green;
-  // }
 }
 
 .invalid {
@@ -233,6 +228,11 @@ ion-card {
 
 .border-radius {
   border-radius: 10px;
+}
+
+.new-line {
+  white-space: initial;
+  word-wrap: break-word;
 }
 
 
@@ -326,5 +326,11 @@ ion-card {
 
   .content-wrapper {
     height: 200px;
+  }
+}
+
+@media(max-width: 500px) {
+  .sm {
+    font-size: 15px;
   }
 }

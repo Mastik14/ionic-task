@@ -77,7 +77,7 @@
             </h2>
           </ion-text>
         </div>
-        <div class="form-wrapper">
+        <ion-col class="form-wrapper">
           <div class="content-wrapper">
             <div class="item">
               <div class="inline-block">
@@ -323,18 +323,14 @@
               </ion-row>
 
               <ion-row
-                *ngIf="
-                  form.get('city').invalid && form.get('city').touched
-                "
+                *ngIf="form.get('city').invalid && form.get('city').touched"
               >
                 <ion-col *ngIf="form.get('city').errors.required">
                   <p>* City should not be empty</p>
                 </ion-col>
               </ion-row>
               <ion-row
-                *ngIf="
-                  form.get('city').invalid && form.get('city').touched
-                "
+                *ngIf="form.get('city').invalid && form.get('city').touched"
               >
                 <ion-col *ngIf="form.get('city').errors.minlength">
                   <p>
@@ -374,7 +370,8 @@
 
               <ion-row
                 *ngIf="
-                  form.get('unitedStates').invalid && form.get('unitedStates').touched
+                  form.get('unitedStates').invalid &&
+                  form.get('unitedStates').touched
                 "
               >
                 <ion-col *ngIf="form.get('unitedStates').errors.required">
@@ -383,17 +380,22 @@
               </ion-row>
               <ion-row
                 *ngIf="
-                  form.get('unitedStates').invalid && form.get('unitedStates').touched
+                  form.get('unitedStates').invalid &&
+                  form.get('unitedStates').touched
                 "
               >
                 <ion-col *ngIf="form.get('unitedStates').errors.minlength">
                   <p>
                     * United States Must be at least
-                    {{ form.get("unitedStates").errors.minlength.requiredLength }}.
+                    {{
+                      form.get("unitedStates").errors.minlength.requiredLength
+                    }}.
                   </p>
                   <p>
                     * Now the number of characters
-                    {{ form.get("unitedStates").errors.minlength.actualLength }}.
+                    {{
+                      form.get("unitedStates").errors.minlength.actualLength
+                    }}.
                   </p>
                 </ion-col>
               </ion-row>
@@ -442,18 +444,14 @@
               </ion-row>
 
               <ion-row
-                *ngIf="
-                  form.get('state').invalid && form.get('state').touched
-                "
+                *ngIf="form.get('state').invalid && form.get('state').touched"
               >
                 <ion-col *ngIf="form.get('state').errors.required">
                   <p>* State should not be empty</p>
                 </ion-col>
               </ion-row>
               <ion-row
-                *ngIf="
-                  form.get('state').invalid && form.get('state').touched
-                "
+                *ngIf="form.get('state').invalid && form.get('state').touched"
               >
                 <ion-col *ngIf="form.get('state').errors.minlength">
                   <p>
@@ -468,18 +466,14 @@
               </ion-row>
 
               <ion-row
-                *ngIf="
-                  form.get('zip').invalid && form.get('zip').touched
-                "
+                *ngIf="form.get('zip').invalid && form.get('zip').touched"
               >
                 <ion-col *ngIf="form.get('zip').errors.required">
                   <p>* Zip should not be empty</p>
                 </ion-col>
               </ion-row>
               <ion-row
-                *ngIf="
-                  form.get('zip').invalid && form.get('zip').touched
-                "
+                *ngIf="form.get('zip').invalid && form.get('zip').touched"
               >
                 <ion-col *ngIf="form.get('zip').errors.minlength">
                   <p>
@@ -502,7 +496,16 @@
                     color="dark"
                     expand="block"
                   >
-                    > Add Payment Information
+                    <div>
+                      <p class="sm" no-margin>
+                        <ion-label
+                          >&gt; &nbsp; &nbsp; Add Payment Information</ion-label
+                        >
+                      </p>
+                      <p class="sm" no-margin>
+                        <ion-label>USA Offer Only</ion-label>
+                      </p>
+                    </div>
                   </ion-button>
                 </ion-col>
               </ion-row>
@@ -513,7 +516,7 @@
               </div>
             </ion-grid>
           </form>
-        </div>
+        </ion-col>
         <div class="bg-green content-center h-50">
           <ion-text>
             <p class="bold ion-no-margin">
