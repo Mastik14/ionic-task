@@ -30,7 +30,9 @@
         ></ion-img>
         <ion-text class="ion-text-center">
           <h2 class="bold f-z">Limited Time</h2>
-          <p class="f-z">Also <span class="bold f-z">FREE</span> Shipping Today</p>
+          <p class="f-z">
+            Also <span class="bold f-z">FREE</span> Shipping Today
+          </p>
         </ion-text>
         <div class="ion-text-center bg-dark h-50 content-center mt-mb d-n">
           <ion-text>
@@ -76,53 +78,43 @@
           </ion-text>
         </div>
         <div class="form-wrapper">
-          <!-- <div class="content-wrapper">
-            <ion-grid>
-              <ion-row>
-                <ion-col>
-                  <div class="items">
-                    <div class="item">
-                      <h2>1</h2>
-                    </div>
-                    <div class="item">
-                      <h2>SHIPPING</h2>
-                      <p>Where Should We Ship Your Product?</p>
-                    </div>
-                  </div>
-                </ion-col>
-                <ion-col>
-                  <ion-item>
-                    <div class="content">
-                      <h2>2</h2>
-                    </div>
-                    <div class="content2">
-                      <h2>QUANTITY</h2>
-                      <p>How Many Would You Like?</p>
-                    </div>
-                  </ion-item>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </div> -->
+          <div class="content-wrapper">
+            <div class="item">
+              <div class="inline-block">
+                  <h1 class="inline-block">1</h1>
+              </div>
+              <div class="inline-block">
+                  <span class="inline-block">SHIPPING</span>
+                  <span class="inline-block"
+                    >Where Should We Ship Your Product ?</span
+                  >
+              </div>
+            </div>
+            <div class="item">
+              <h2 class="inline-block">2</h2>
+              <p class="inline-block">QUANTITY</p>
+              <p class="inline-block">How Many Would You Like ?</p>
+            </div>
+          </div>
           <form>
             <ion-grid>
               <ion-row>
                 <ion-col>
-                  <ion-item>
-                    <ion-label position="floating">First Name</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                  <ion-item class="input-wrapper">
+                    <ion-label lines="none" position="floating">First Name</ion-label>
+                    <ion-input lines="none" type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
                 </ion-col>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating">Last Name</ion-label>
-                    <ion-input type="text" autocomplete autocorrect></ion-input>
+                    <ion-input lines="none" type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
                 </ion-col>
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating">Email Address</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
@@ -130,7 +122,7 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating"
                       >Mobile Phone Number</ion-label
                     >
@@ -140,7 +132,7 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating">Address Line 1</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
@@ -148,7 +140,7 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating">City</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
@@ -156,7 +148,7 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper border-radius">
                     <ion-label position="floating">United States</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
@@ -164,13 +156,13 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper border-radius">
                     <ion-label position="floating">State/Province</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
                 </ion-col>
                 <ion-col>
-                  <ion-item>
+                  <ion-item class="input-wrapper">
                     <ion-label position="floating">Zip/Postal Code</ion-label>
                     <ion-input type="text" autocomplete autocorrect></ion-input>
                   </ion-item>
@@ -178,7 +170,12 @@
               </ion-row>
               <ion-row>
                 <ion-col>
-                  <ion-button class="btn" type="submit" color="dark" expand="block">
+                  <ion-button
+                    class="btn"
+                    type="submit"
+                    color="dark"
+                    expand="block"
+                  >
                     > Add Payment Information
                   </ion-button>
                 </ion-col>
@@ -225,7 +222,7 @@
       <ion-col size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
         <div class="bg-white h-50 content-center">
           <ion-text>
-            <h2 class="bold underline">Common Q&A</h2>
+            <h2 class="bold underline f-z-32">Common Q&A</h2>
           </ion-text>
         </div>
         <ion-list>
@@ -235,15 +232,15 @@
             *ngFor="let answer of loadedAnswers"
           >
             <ion-label>
-              <div class="answer-wrapper">
+              <div class="answer-wrapper m-g-10">
                 <ion-icon
                   ios="ios-help-circle"
                   md="md-help-circle"
                   size="large"
                 ></ion-icon>
-                <h2 class="bold">{{ answer.qestuion }}</h2>
+                <h2 class="bold f-z-25 m-l-10">{{ answer.qestuion }}</h2>
               </div>
-              <p>{{ answer.answer }}</p>
+              <p class="f-z-20 c-black">{{ answer.answer }}</p>
             </ion-label>
           </ion-item>
         </ion-list>
@@ -251,14 +248,18 @@
       <ion-col size-lg="5" size-sm="12" offset-sm="0">
         <div class="bg-white h-50">
           <ion-text>
-            <h2 class="bold underline">What Our Customers Say</h2>
+            <h2 class="bold underline f-z-32">What Our Customers Say</h2>
           </ion-text>
         </div>
         <ion-list>
-          <ion-item lines="none" *ngFor="let review of loadedReviews">
+          <ion-item
+            no-padding
+            lines="none"
+            *ngFor="let review of loadedReviews"
+          >
             <ion-label>
-              <div class="review-wrapper">
-                <h2 class="bold">{{ review.customer }}</h2>
+              <div class="review-wrapper" no-padding>
+                <h2 class="bold f-z-25">{{ review.customer }}</h2>
                 <ion-icon
                   class="bg-yellow"
                   ios="ios-star"
@@ -290,7 +291,7 @@
                   size="large"
                 ></ion-icon>
                 <ion-text>
-                  <p>{{ review.review }}</p>
+                  <p class="f-z-20 c-black">{{ review.review }}</p>
                 </ion-text>
               </div>
             </ion-label>
@@ -301,18 +302,33 @@
   </ion-grid>
 
   <ion-grid>
-    <ion-row>
-      <ion-col no-border class="bg-grey ion-no-margin" size-lg="5" size-sm="12" offset-sm="0" offset-lg="1">
-        <ion-text class="content-center">
-          <p class="normal">CATE MCNABB &copy 2019. All Rights Reserved</p>
-        </ion-text>
-      </ion-col>
-      <ion-col no-border class="bg-grey ion-no-margin" size-lg="5" size-sm="12" offset-sm="0">
-        <p class="normal ion-text-center">
-          Contact | Privacy Policy | Terms & Conditions | Customer Service
-          Phone:+1 (815) 900 7305 - Text: +1 (312) 626 9507
-        </p>
-      </ion-col>
-    </ion-row>
+    <div class="footer-wrapper">
+      <ion-row>
+        <ion-col
+          no-border
+          class="bg-grey ion-no-margin"
+          size-lg="5"
+          size-sm="12"
+          offset-sm="0"
+          offset-lg="1"
+        >
+          <ion-text class="content-center">
+            <p class="normal f-z-20">CATE MCNABB &copy 2019. All Rights Reserved</p>
+          </ion-text>
+        </ion-col>
+        <ion-col
+          no-border
+          class="bg-grey ion-no-margin"
+          size-lg="5"
+          size-sm="12"
+          offset-sm="0"
+        >
+          <p class="normal ion-text-center f-z-20">
+            Contact | Privacy Policy | Terms & Conditions | Customer Service
+            Phone:+1 (815) 900 7305 - Text: +1 (312) 626 9507
+          </p>
+        </ion-col>
+      </ion-row>
+    </div>
   </ion-grid>
 </ion-content>
